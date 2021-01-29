@@ -3,13 +3,11 @@ using namespace std;
 
 
 int main(){
-	int r=9,b=7,w=55,x,y;
+	int r=9,b=7,w=55,x,y=0;
 	
-	for(int i=MIN;i<MAX;i++){
+	for(int i=0;w>=y;i++){
 		y=b*i;
 		x=w-y;
-		if(w<y)
-			return 0;
 		if(x%r==0)
 			cout<<x/r<<" "<<i<<endl;
 
