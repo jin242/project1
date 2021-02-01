@@ -1,4 +1,4 @@
-#include<iostream> //졸려서 나온 하바리 코드
+#include<iostream> //졸려서 나온 하바리 코드. 나중에 고치자
 #include<string.h>
 using namespace std;
 
