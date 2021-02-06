@@ -25,16 +25,24 @@ class circlemanager{
 	public:
 	circlemanager(int size){
 		this->size=size;
-		circle p=new circle[size]
+		p = new circle[size];
+		string name;
+		int radius;
+		
+		for(int i=0;i<size;i++){
+		cout<<"원"<<i+1<<"이름 반지름: ";
+		cin>>name>>radius;
+		p[i].setcircle(name,radius);
 	}
-	~circlemanager();
+	}
+	~circlemanager(){;}
 	void searchname(){
 		cout<<"검색어입력: ";
 		string n;
 		cin>>n;
 		for(int i=0;i<size;i++){
-			if(!compare(p[i]->getname,n)){
-				cout<<n<<" 면적: "<<p[i]->getarea()<<endl;;
+			if(!n.compare(p[i].getname())){
+				cout<<n<<" 면적: "<<p[i].getarea()<<endl;;
 			}
 		}
 	}
@@ -43,26 +51,25 @@ class circlemanager{
 		double n;
 		cin>>n;
 		for(int i=0;i<size;i++){
-			if(p[i]->getarea>n)){
-				cout<<" 이름: "<<p[i]->getname<<"면적: "<<p[i]->getarea();
+			if(p[i].getarea()>n){
+				cout<<" 이름: "<<p[i].getname()<<"면적: "<<p[i].getarea();
 			}
 		}
 	}
 };
 
 int main(){
-	string name;
-	int radius;
+	
 	int n;
 	cout<<"개수: ";
 	cin>>n;
 	
 	circlemanager a(n);
-	for(int i=0;i<n;i++){
-		cout<<"원"<<i+1<<"이름 반지름: ";
-		cin>>name>>radius;
-		a[i]->setcircle(name,radius);
-	}
 	
+	cout<<"이름검색";
+	a.searchname();
+	
+	cout<<"면적검색";
+	a.searcharea();
 	
 }
