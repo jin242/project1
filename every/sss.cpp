@@ -20,12 +20,9 @@ class user{
 			return 2;
 		else return 1;
 	}
-	void zzz(){
-		cout<<x<<y<<z;
-	}
 };
 
-user game(user a[], int size){
+user game(user a[], int size){ //재귀? 뭘로 하지
 	while(1){
 		
 	}
@@ -42,6 +39,6 @@ int main(){
 		user y(a,b,c);
 		x[i]=y;
 	}
-	x[1].zzz();
+	
 	
 }
